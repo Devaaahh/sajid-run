@@ -1,0 +1,16 @@
+# secrets and local data - set SUPABASE_URL / SUPABASE_KEY in Vercel's Environment Variables instead
+.env
+scores.json
+scores.xlsx
+
+# editor / agent config
+.claude
+.mcp.json
+
+# original source photos and audio (game/assets holds the prepared copies)
+/runner.png
+/catcher 1.png
+/catcher 2.png
+/starting audio.mp3
+/audio between run.mp3
+/audio when catched.mp3

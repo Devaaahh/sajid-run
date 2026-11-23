@@ -1,0 +1,13 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "builds": [
+    {
+      "src": "server.py",
+      "use": "@vercel/python",
+      "config": { "includeFiles": ["game/**"] }
+    }
+  ],
+  "routes": [
+    { "src": "/(.*)", "dest": "server.py" }
+  ]
+}

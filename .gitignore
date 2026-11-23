@@ -1,0 +1,5 @@
+.env
+scores.json
+scores.xlsx
+__pycache__/
+.vercel

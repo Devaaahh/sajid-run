@@ -38,6 +38,13 @@ To store scores in **Supabase**:
 
 Without `.env`, scores are kept in `scores.json` and `scores.xlsx` is still updated.
 
+## Deploy to Vercel
+`server.py` exposes a WSGI `app`, and `vercel.json` routes every request to it.
+1. Push this folder to GitHub and import it in Vercel, or run `vercel` in this folder.
+2. In the Vercel project, open **Settings → Environment Variables** and add `SUPABASE_URL` and `SUPABASE_KEY`.
+   Vercel's disk is temporary, so without Supabase the scores get wiped.
+3. Deploy. The Excel file is generated fresh from Supabase each time someone opens `/api/scores.xlsx`.
+
 ## Files
 - `server.py`: Python server for the game, the score API, Supabase sync and the Excel export
 - `prepare_assets.py`: cuts the runner out of his photo, makes round face badges for the catchers, and copies the audio into `game/assets`

@@ -10,7 +10,10 @@ create table if not exists public.scores (
 
 create index if not exists scores_score_idx on public.scores (score desc);
 
--- Row Level Security: anyone with the anon key may read and add scores, nobody may edit/delete.
+-- Let the Data API (publishable / anon key) read and add scores - nothing else.
+grant select, insert on public.scores to anon, authenticated;
+
+-- Row Level Security: anyone with the publishable key may read and add scores, nobody may edit/delete.
 alter table public.scores enable row level security;
 
 drop policy if exists "read scores" on public.scores;
