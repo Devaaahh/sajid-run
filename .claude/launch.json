@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "sajid-run",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["server.py", "8000", "--no-browser"],
+      "port": 8000
+    }
+  ]
+}
